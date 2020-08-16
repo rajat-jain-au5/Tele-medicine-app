@@ -1,0 +1,74 @@
+[
+    {
+          "speciality": "Cardiology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631939/speciality/cardiology_c9axqx.png"
+    },
+    {
+          "speciality": "Cardiac Surgery",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/cardiac_gjjoxb.png"
+    },
+    {
+          "speciality": "Dermatology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/daramto_ogg5w6.png"
+    },
+    {
+          "speciality": "E.N.T",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+    },
+    {
+          "speciality": "Endocrinologist",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+    },
+    {
+          "speciality": "General Medicine",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/genereal_ead5du.png"
+    },
+    {
+          "speciality": "Gynecologist",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+    },
+    {
+          "speciality": "Gastroentreology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/gastreology_s3atfd.png"
+    },
+    {
+          "speciality": "Nephrology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/nephrology_rgyigi.png"
+    },
+    {
+          "speciality": "Neurology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/neurology_hvnn6v.png"
+    },
+    {
+          "speciality": "Oncology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/oncology_kx5on6.png"
+    },
+    {
+          "speciality": "Ophthalmologist",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+    },
+    {
+          "speciality": "Pediatrics ",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatrics_gzgqdi.png"
+    },
+    {
+          "speciality": "Pulmonologist",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+    },
+    {
+          "speciality": "Plastic Surgery",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631760/speciality/surgory_euzjqr.png"
+    },
+    {
+          "speciality": "Psychiatrist",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/psychrity_gfwyew.png"
+    },
+    {
+          "speciality": "Urology",
+          "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631760/speciality/Urology_tfhzgm.png"
+    },
+      {
+            "speciality": "Dental",
+            "image": "https://res.cloudinary.com/dsmr18nsi/image/upload/v1592631759/speciality/pediatric_yhjp1i.png"
+      }
+]

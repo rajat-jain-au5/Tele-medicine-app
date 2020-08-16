@@ -1,0 +1,359 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  width: 100%;
+  height:100%;
+  overflow-x: hidden;
+  color: #974660;
+}
+
+.test .parallax {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 7s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.bg{
+   background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
+
+}
+.doctor-register{
+  /* overflow: visible; */
+height: 600px;
+    overflow-y: auto;
+    padding:20px;
+}
+.parallax {
+  /* The image used */
+  background-image: url("./images/11.jpg");
+
+  /* Set a specific height */
+  min-height: 700px; 
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.typical{
+  padding-top: 250px;
+  padding-left: 700px;
+}
+.btn-warning{
+  background-color: #FF8A76;
+  color: #974660;
+  border-color: #974660;
+}
+
+.btn-warning:hover{
+  background-color: #F98673;
+  border-color: #974660;
+}
+.parallax1{
+  /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
+   height: 1000px; 
+   background-color:transparent;
+   font-size: 36px; 
+}
+
+
+.guide{
+ border-radius: 15px 50px 30px;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+ .overlay {
+   width: 100%;
+  transition: .5s ease;
+  opacity:20;
+  font-size: 20px;
+  padding: 20px;
+  position: fixed;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+#logo{
+    height: 60px;
+    width: 180px;
+}
+
+
+.banner{
+  background-color:#F2F3F4;
+  height:250px;
+  /* margin-top: 100px; */
+}
+
+.main {
+    width: 80%;
+    margin: 120px auto;
+}
+/* .sp{
+  box-shadow: 2px 4px 10px red;
+} */
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.speciality {
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 350px;
+  height: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-align: left;
+
+  /* box-shadow: 0 0 0 1px rgba(138, 211, 123, 0.2) */
+
+}
+
+.speciality:hover{
+      box-shadow: 0 0 6px rgb(77, 193, 104);
+}
+.speciality span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.speciality span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.speciality:hover span {
+  padding-right: 25px;
+}
+
+.speciality:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+/* footer classes */
+.footer{
+   height:200px;
+   position: sticky;
+  
+    width: 100%;
+    background-color:white;
+   
+}
+
+.first{
+  list-style: none;
+  text-align: left;
+  color: #BC9A39;
+  font-weight: 500;
+  font-size: medium;
+}
+.first a{
+  color: #BC9A39;
+
+}
+.social-icon{
+  display: flex;
+  justify-content: space-around;
+  font-size:large;
+  color: #05A8B2;
+}
+
+
+.test .parallax{
+  margin-top: 0px;
+}
+.parallax1 {
+  height: 700px;
+}
+.splash{
+background:white;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  
+}
+  
+
+.container .circle{
+
+  font-weight: bold;
+  letter-spacing: .1rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1D1F20;
+  animation: 1.5s linear 0s infinite normal pulse;
+  
+  position: absolute;
+  left:45%;
+  top:40%;
+  /* transform:translate(-50%); */
+}
+  
+
+ .circle:hover{
+
+    animation: none;
+  }
+  
+  
+@keyframes pulse{
+ 0%{
+
+   transform: scale(.9);
+   box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 0px #efeb2450;
+ }
+    30%{
+      box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 25px #efeb2450;
+    }
+    70%{
+
+      box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 75px #efeb2410;
+    }
+    100%{
+
+      transform: scale(1.0);
+      box-shadow: 1px 1px 3px 1px #aba81a30, 0px 0px 0px 100px transparent;
+    }
+}
+   
+
+
+/* changes */
+
+.bg-nav{
+  background-color: #B5B7DD;
+}
+
+.text-dark{
+  color : #974660 !important
+}
+
+.text-dark a{
+  color: #BC9A39;
+
+}
+.social-icon a{
+  color: #BC9A39;
+}
+
+.btn-warning:focus{
+  background-color: #FF8A76;
+  border-color: #FF8A76;
+}

@@ -1,0 +1,56 @@
+import React, { Component } from "react";
+
+
+export default class Guide extends Component {
+
+  render() {
+    return (
+      <div>
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col s12 l4 mt-5">
+                <img
+                data-aos="fade-right"
+                className="guide"
+                  src={require("../../images/4-1.png")}
+                  style={{width: "380px", height:"284px "}}
+                  alt=""
+                />
+              </div>
+              <div className="col s12 l6 offset-l1 mt-5">
+                <h4 class="indigo-text text-darken-4">Lord Byron</h4>
+                <p>
+                  “Always laugh when you can, it is cheap medicine.”
+              </p>
+              </div>
+            </div>
+            <div className="row">
+              
+              <div className="col s12 l6 offset-l1 mt-5">
+                <h4 class="indigo-text text-darken-4">Luther Burbank</h4>
+                <p>
+                  
+                  “Flowers always make people better, happier, and more helpful; they are sunshine, food and medicine to the mind.”
+                  
+              </p>
+              </div>
+              <div className="col s12 l4 mt-5">
+                <img
+                  className="guide"
+                  data-aos="fade-left"
+                  style={{width: "380px", height:"284px", marginLeft:"70px"}}
+                  src={require("../../images/4.png")}
+                  alt=""
+                />
+              </div>
+            </div>
+            
+          </div>
+
+        </section>
+       
+      </div>
+    );
+  }
+}
