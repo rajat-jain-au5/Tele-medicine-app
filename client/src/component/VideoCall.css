@@ -1,0 +1,63 @@
+.daily-videos-wrapper {
+    position: absolute;
+    display: grid;
+     top: 0px;
+     right:0px;
+     width:20%;
+     height:20%;
+     bottom: 0px;
+          background-size: cover;
+    /* overflow-x: auto; */
+  }
+  body{
+        width: 100%;
+        height: 90vh;
+  }
+  .user{
+         width: 100%;
+         height: 95vh;
+  }
+  .video1{
+        position: relative;
+         width: 100%;
+         height: 95vh;
+         overflow-y:hidden ;
+  }
+  .partnervideo{
+        position: relative;
+        width:200px;
+        height:200px;
+        bottom: -500px;
+        left:20px;
+  }
+  .daily{
+        position: relative;
+        width: 100%;
+        background-size: cover;
+  }
+  .acceptbtn{
+    position: absolute;
+    /* display: grid; */
+    /* width:500px;
+    height:200px; */
+    text-align: center;
+     top: 306px;
+     left:500px;
+     background-color:darkcyan;
+  }
+  .btn-action{
+        width: 50px;
+        height:50px;
+       /* position: relative; */
+        border-radius:50px;
+        background-color: green;
+        color: white;
+  }
+  .allbtn{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        top:-80px;
+        left:650px;
+        width: 200px;
+  }

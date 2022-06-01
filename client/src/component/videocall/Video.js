@@ -24,7 +24,7 @@ class Video extends React.Component {
   videoCall = new VideoCall();
 
   componentDidMount() {
-    const socket = io('/');
+    const socket = io('http://localhost:3010/');
     const component = this;
     this.setState({ socket });
     const { roomId } = this.props.match.params.id
@@ -117,6 +117,7 @@ class Video extends React.Component {
   }
 
   hangup = ()=>{
+    // var popup = window.open('...');
     window.close();
   }
   enter = roomId => {

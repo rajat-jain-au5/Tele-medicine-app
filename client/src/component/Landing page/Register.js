@@ -6,17 +6,17 @@ import Parallax from './Parallax'
 
 class Register extends Component {
       render() {
-
+            
             return (
                   <div>
-                        <Navbar />
-                        <Parallax />
+                        <Navbar/>
+                        <Parallax/>
                         <br />
                         <hr />
                         <h5 className="text-center">What our Users have to say</h5>
                         <hr />
                         <SliderComponent />
-                        <Footer />
+                        <Footer/>
                   </div>
             )
       }

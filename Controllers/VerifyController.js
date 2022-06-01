@@ -23,7 +23,7 @@ verifyController.verify = function(req,res){
       secure: true,
       auth : {
         user : "medicalapp331@gmail.com",
-        pass : "rajat@1993"
+        pass : "mjpdksnlvndgyhwe"
       }
     })
 
@@ -34,7 +34,7 @@ verifyController.verify = function(req,res){
       subject : "Med - Tech ",
       text: "IT works",
       html:
-        "Welcome to Med-Tech.Please click on Link to register Your account.<br><a href=https://arogya-149.herokuapp.com/" + userInfo + "?token=" + token +" target='_blank'>https://arogya-149.herokuapp.com/doc?token="+token+"</a>"  
+        "Welcome to Med-Tech.Please click on Link to register Your account.<br><a href=http://localhost:3000/" + userInfo + "?token=" + token +" target='_blank'>https://arogya-149.herokuapp.com/doc?token="+token+"</a>"  
     }
 
   await  transpoter.sendMail(mailOptions, function(err, userData) {

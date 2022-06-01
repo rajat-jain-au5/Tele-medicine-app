@@ -1,5 +1,11 @@
 import Peer from 'simple-peer'
+// // REACT_APP_SIGNALING_SERVER = http://localhost:3010
+// var REACT_APP_STUN_SERVERS = 'stun: numb.viagenie.ca'
+// var REACT_APP_TURN_SERVERS = 'turn: numb.viagenie.ca'
 
+// // # You can create your turn account here: http://numb.viagenie.ca/cgi-bin/numbacct
+// var REACT_APP_TURN_USERNAME = 'medicalapp331@gmail.com'
+// var REACT_APP_TURN_CREDENCIAL = 'Rajat@1993'
 export default class VideoCall {
     
     peer = null 

@@ -7,13 +7,13 @@ function ForgotPassword() {
   const history = useHistory()
   const { register, handleSubmit, errors } = useForm()
   const setPass = (data) => {
-    axios.post("/setpassword",data).then(res => {
+    axios.post("http://localhost:3010/setpassword",data).then(res => {
       if(res.data === 'noUser'){
         history.push("/register/nouser")
       }else{
         toast.success('We sent You a mail', { position: toast.POSITION.TOP_RIGHT, autoClose: 5000 })
         localStorage.setItem('setpass', res.data);
-      }
+      } 
     })
   } 
   return (

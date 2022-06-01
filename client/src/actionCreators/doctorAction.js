@@ -1,9 +1,10 @@
 import axios from 'axios'
 //import DocBooking from '../component/DocBooking';
 export function searchSpeciality(search) {
+      // console.log(search)
       return function (dispatch) {
             return axios
-                  .get(`/doctor/${search}`,
+                  .get(`http://localhost:3010/doctor/${search}`,
                         {
                               headers: {
                                     "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -23,7 +24,7 @@ export function searchSpeciality(search) {
 export function selectDoctor(id) {
       return function (dispatch) {
             return axios
-                  .post(`/selectdoctor`, { myId: id },
+                  .post(`http://localhost:3010/selectdoctor`, { myId: id },
                         {
                               headers: {
                                     "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -42,7 +43,7 @@ export function selectDoctor(id) {
 export function docSlott(data, id) {
       let dateStr = data.toLocaleDateString()
       return function (dispatch) {
-            return axios.post("/docslot", { date: dateStr, docId: id },
+            return axios.post("http://localhost:3010/docslot", { date: dateStr, docId: id },
                   {
                         headers: {
                               "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -64,13 +65,14 @@ export function bookSlot(id, data) {
             case "slot_1":
                   data.slot_1 = true
                   return function(dispatch){
-                        return axios.post("/bookslot", data,
+                        return axios.post("http://localhost:3010/bookslot", data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
                                     }
                               }).then(({ data }) => {
                                     dispatch({ type: "confirm_booking", payload: { status : true} })
+                                    console.log("data at response", data)
                                     //return data
                               }).catch(({ err }) => {
                                     console.log(err)
@@ -80,7 +82,7 @@ export function bookSlot(id, data) {
             case "slot_2":
                   data.slot_2 = true
                   return function(dispatch){
-                        return axios.post("/bookslot", data,
+                        return axios.post("http://localhost:3010/bookslot", data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -97,7 +99,7 @@ export function bookSlot(id, data) {
             case "slot_3":
                   data.slot_3 = true
                   return function(dispatch){
-                        return axios.post("/bookslot", data,
+                        return axios.post("http://localhost:3010/bookslot", data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -113,7 +115,7 @@ export function bookSlot(id, data) {
             case "slot_4":
                   data.slot_4 = true
                   return function(dispatch){
-                        return axios.post("/bookslot", data,
+                        return axios.post("http://localhost:3010/bookslot", data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -129,7 +131,7 @@ export function bookSlot(id, data) {
             case "slot_5":
                   data.slot_5 = true
                   return function(dispatch){
-                        return axios.post("/bookslot", data,
+                        return axios.post("http://localhost:3010/bookslot", data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -145,7 +147,7 @@ export function bookSlot(id, data) {
             case "slot_6":
                   data.slot_6 = true
                   return function(dispatch){
-                        return axios.post("/bookslot",data,
+                        return axios.post("http://localhost:3010/bookslot",data,
                               {
                                     headers: {
                                           "x-auth-token": window.localStorage.getItem("patientAuth"),
@@ -168,7 +170,7 @@ export function docBooking(data){
       let data_1 = {date : data}
       return function (dispatch) {
 
-           return axios.post("/booking", data_1, {
+           return axios.post("http://localhost:3010/booking", data_1, {
             headers: {
                   "x-auth-token": window.localStorage.getItem("doctorAuth"),
             }

@@ -5,10 +5,10 @@ export default class Contact extends Component {
     return (
       <div>
         {/* <!-- contact form --> */}
-        <section className="container mt-5">
+        <section class="section container scrollspy" id="contact">
           <div class="row">
-            <div class="col-md-6">
-              <h2>Get in Touch</h2>
+            <div class="col s12 l5">
+              <h2 class="indigo-text text-darken-4">Get in Touch</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.
@@ -28,23 +28,45 @@ export default class Contact extends Component {
                 ornare nec.
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col s12 l5 offset-l2">
               <form>
-                <div>
-                  <label htmlfor="email"> Email</label>
-                  <input className="form-control" type="email" id="email" placeholder="enter Email"/>
+                <div class="input-field ">
+                  <i class="material-icons prefix">email</i>
+                  <input type="email" id="email" />
+                  <label for="email">Your Email</label>
                 </div>
-                <div>
-                  <label htmlfor="message">Message</label>
+                <div class="input-field">
+                  <i class="material-icons prefix">message</i>
                   <textarea
-                  className="form-control"
+                    id="message"
+                    class="materialize-textarea"
+                    cols="20"
+                    rows="20"
                   ></textarea>
-                 
+                  <label for="message">Your Message</label>
                 </div>
-              <br/>
-               
-                <div>
-                  <button class="btn btn-success">Submit</button>
+                <div class="input-field">
+                  <i class="material-icons prefix">date_range</i>
+                  <input type="text" id="date" class="datepicker" />
+                  <label for="date">Choose a date you need me for...</label>
+                </div>
+                <div class="input-field">
+                  <p>Services required:</p>
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Regarding Books</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input type="checkbox" />
+                      <span>Regarding Blogs</span>
+                    </label>
+                  </p>
+                </div>
+                <div class="input-field center">
+                  <button class="btn indigo darken-4">Submit</button>
                 </div>
               </form>
             </div>

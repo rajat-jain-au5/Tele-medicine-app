@@ -27,7 +27,7 @@ class DocBooking extends React.Component {
     }
 
     buttonSlot = {
-        slot_1: {startHour : 10, endHour: 10, startMin: 0, endMin: 59},
+        slot_1: {startHour : 10, endHour: 10, startMin: 0, endMin: 30},
         slot_2: {startHour : 11, endHour: 11, startMin: 0, endMin: 30},
         slot_3: {startHour : 12, endHour: 12, startMin: 0, endMin: 30},
         slot_4: {startHour : 16, endHour: 16, startMin: 0, endMin: 30},
@@ -47,7 +47,11 @@ class DocBooking extends React.Component {
           1000
         );
 
-    
+    // const token = localStorage.getItem("doctorAuth")
+    // const payload = JSON.parse(atob(token.split(".")[1]));
+    // this.setState({
+    //     id:payload.id
+    // })
          
       }
       onChange = dateCal => {
@@ -134,7 +138,7 @@ class DocBooking extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log("gdgf", state.doctor.booking)
+    console.log("gdgf", state.doctor.booking)
     return {
         myBooking: state.doctor.booking
     }

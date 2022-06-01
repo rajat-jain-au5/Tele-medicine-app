@@ -45,97 +45,94 @@ export default class SliderComponent extends Component {
                               <div className="col">
                                     <Slider {...settings}>
                                           <div>
-                                                <div className="container m-5">
+                                                <div className="container shadow m-5">
                                                       <div className="row">
                                                             <div className="col-3">
                                                                  
+                                                                        <img
+                                                                              src={require("../../images/testimonials/1.jpg")}
+                                                                              alt="First slide"
+                                                                              style={{width : "150px", height: "150px",borderRadius: "20px"}}
+                                                                             className="mx-auto pt-1 pb-1"
+                                                                              
+                                                                        />
                                                             </div>
                                                             <div className="col-9 mx-auto">
-                                                                  <img
-                                                                        src={require("../../images/testimonials/1.jpg")}
-                                                                        alt="First slide"
-                                                                        style={{ width: "100px", height: "100px", borderRadius: "20px" }}
-                                                                        className="mx-auto pt-1 pb-1"
-
-                                                                  />
-                                                                  <h4 className="text-center">Mary Brane</h4>
                                                                   <p className="text-center">
-                                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses&nbsp; <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                                                  Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses.
                                                                         
                                                                </p>
+                                                               <h4 className="text-center">Mary Brane</h4>
                                                             </div>
                                                       </div>
                                                 </div>
                                           </div>
 
                                           <div>
-                                                <div className="container m-5">
+                                                <div className="container shadow-lg m-5">
                                                       <div className="row">
                                                             <div className="col-3">
                                                                  
-                                                                       
+                                                                        <img
+                                                                              src={require("../../images/testimonials/2.jpg")}
+                                                                              alt="First slide"
+                                                                              style={{width : "150px", height: "150px",borderRadius: "20px"}}
+                                                                             className="mx-auto pt-1 pb-1"
+                                                                              
+                                                                        />
                                                             </div>
                                                             <div className="col-9 mx-auto">
-                                                                  <img
-                                                                        src={require("../../images/testimonials/2.jpg")}
-                                                                        alt="First slide"
-                                                                        style={{ width: "100px", height: "100px", borderRadius: "20px" }}
-                                                                        className="mx-auto pt-1 pb-1"
-
-                                                                  />
+                                                                  <p className="text-center" >
+                                                                  Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses.
+                                                               </p>
                                                                <h4 className="text-center">Sheri Wood</h4>
-                                                                  <p className="text-center" >
-                                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i>
-                                                               </p>
                                                             </div>
                                                       </div>
                                                 </div>
                                           </div>
 
                                           <div>
-                                                <div className="container m-5">
+                                                <div className="container shadow m-5">
                                                       <div className="row">
                                                             <div className="col-3">
                                                                  
-                                                                      
+                                                                        <img
+                                                                              src={require("../../images/testimonials/3.jpg")}
+                                                                              alt="First slide"
+                                                                              style={{width : "150px", height: "150px",borderRadius: "20px"}}
+                                                                             className="mx-auto pt-1 pb-1"
+                                                                              
+                                                                        />
                                                             </div>
                                                             <div className="col-9 mx-auto">
-                                                                  <img
-                                                                        src={require("../../images/testimonials/3.jpg")}
-                                                                        alt="First slide"
-                                                                        style={{ width: "100px", height: "100px", borderRadius: "20px" }}
-                                                                        className="mx-auto pt-1 pb-1"
-
-                                                                  />
-                                                               <h4 className="text-center">Donnaelia Branson</h4>
                                                                   <p className="text-center">
-                                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i>
+                                                                  Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses.
                                                                         
                                                                </p>
+                                                               <h4 className="text-center">Donnaelia Branson</h4>
                                                             </div>
                                                       </div>
                                                 </div>
                                           </div>
 
                                           <div>
-                                                <div className="container  m-5">
+                                                <div className="container shadow-lg m-5">
                                                       <div className="row">
                                                             <div className="col-3">
                                                                  
-                                                                       
+                                                                        <img
+                                                                              src={require("../../images/testimonials/4.jpg")}
+                                                                              alt="First slide"
+                                                                              style={{width : "150px", height: "150px",borderRadius: "20px"}}
+                                                                             className="mx-auto pt-1 pb-1"
+                                                                              
+                                                                        />
                                                             </div>
                                                             <div className="col-9 mx-auto">
-                                                                  <img
-                                                                        src={require("../../images/testimonials/4.jpg")}
-                                                                        alt="First slide"
-                                                                        style={{ width: "100px", height: "100px", borderRadius: "20px" }}
-                                                                        className="mx-auto pt-1 pb-1"
-
-                                                                  />
-                                                               <h4 className="text-center">Carole Teague</h4>
                                                                   <p className="text-center" >
-                                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses&nbsp; <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                                                  Thank you for your kindness. Thank you for all the years of excellent nursing. You always ensured I was comfortable and all my needs met. I regret that I can no longer receive my medication at Barnes. Thank you to all the nurses.
                                                                </p>
+                                                               <h4 className="text-center">Carole Teague</h4>
                                                             </div>
                                                       </div>
                                                 </div>

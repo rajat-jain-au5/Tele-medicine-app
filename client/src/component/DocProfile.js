@@ -6,12 +6,12 @@ import Footer from './Landing page/Footer';
 function DocProfile() {
       const { register, handleSubmit, errors } = useForm();
       const [name, setName] = useState("")
-      const [email, setEmail] = useState("")
+      const[email,setEmail] = useState("")
       const [hospital, setHospital] = useState("")
       const [address, setAddress] = useState("")
       const [fees, setFees] = useState("")
-      const [bio, setBio] = useState("")
-      const [image, setImage] = useState("")
+      const [bio,setBio] = useState("")
+      const[image,setImage] = useState("")
       const token = localStorage.getItem("doctorAuth");
       useEffect(() => {
             getDoctor()
@@ -35,7 +35,7 @@ function DocProfile() {
 
             let request = axios({
                   method: "GET",
-                  url: "/getdoctor",
+                  url: "http://localhost:3010/getdoctor",
                   headers: {
                         "x-auth-token": token
                   },
@@ -50,12 +50,12 @@ function DocProfile() {
                   setFees(res.data.fees)
             })
       }
-      const docsave = (data) => {
-            setTimeout(function () {
+      const docsave=(data)=>{
+            setTimeout(function () { 
                   const doc = { name, email, image, bio, hospital, address, fees }
                   let request = axios({
                         method: "POST",
-                        url: "/updateprofile",
+                        url: "http://localhost:3010/updateprofile",
                         data: doc,
                         headers: {
                               "x-auth-token": token
@@ -65,21 +65,18 @@ function DocProfile() {
                         console.log(res)
                         // window.location.href="/profile"
                   })
-            }, 5000);
+                   }, 5000);
+                 
 
-
-
+           
       }
       return (
             <div>
                   <Navbar />
-                  <div className="container mt-5">
+                  <div className="container">
                         <div className="row">
-
-                              <h1 className="col-4 offset-md-3">Profile</h1>
-                        </div>
-                        <div className="row">
-                              <div className="col-md-6 offset-md-3  p-3  rounded shadow">
+                              <div className="col-md-6 offset-md-3">
+                                    <h2>Welcome to Doctor Page</h2>
                                     <form onSubmit={handleSubmit(docsave)}>
                                           <div className="form-group">
                                                 <label for="userName">
@@ -98,7 +95,7 @@ function DocProfile() {
                                                 <label for="image1">
                                                       <b>Select Your Image</b>
                                                 </label>
-                                                <input type="file" name="image" className="form-control" onChange={(e) => uploadPic(e.target.files[0])} id="image1"></input>
+                                                <input type="file" name="image" className="form-control" onChange={(e) => uploadPic(e.target.files[0])}  id="image1"></input>
                                                 {/* {errors.image && <p style={{color : "red"}}>Share your Image</p>} */}
                                           </div>
                                           <div className="form-group">
@@ -130,15 +127,15 @@ function DocProfile() {
                                                 {errors.fees && <p style={{ color: "red" }}>How much you charge?</p>}
                                           </div>
                                           <button type="submit" className="btn btn-warning">
-                                                <b>Update</b>
+                                                <b>save</b>
                                           </button>
                                     </form>
                               </div>
                         </div>
                   </div>
                   <div className="mt-5">
-                        <Footer />
-                  </div>
+                        <Footer/>
+                        </div>
             </div>
       )
 }

@@ -29,7 +29,7 @@ class Dashboard extends Component {
       searchTerm: val
     })
     axios
-      .get(`/doctorname/${val}`,
+      .get(`http://localhost:3010/doctorname/${val}`,
         {
           headers: {
             "x-auth-token": localStorage.getItem("patientAuth"),
@@ -116,7 +116,7 @@ class Dashboard extends Component {
                 <button onClick={() => this.handleSearch(sp.speciality)} className="speciality">
                   <img
                     src={sp.image}
-                    alt=""
+                    alt="Cardiology"
                     width="50px"
                     height="50px"
                     className="float-left"

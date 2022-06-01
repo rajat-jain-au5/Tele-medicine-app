@@ -13,7 +13,7 @@ export default class Parallax extends Component {
             return (
                   <div className="test">
                         <div className="parallax">
-                              <div className="typical">
+                              <div className="typical"> 
                                     <h2><Typical
                                           loop={Infinity}
                                           wrapper="h2"
@@ -28,17 +28,17 @@ export default class Parallax extends Component {
                                     /></h2>
                               </div>
 
-                              <div data-aos="flip-up" style={{ width: "400px", height: "150px", paddingLeft: "40px", marginLeft: "40px", marginTop: "150px", backgroundColor: "#BC9A39" }}>
+                              <div data-aos="flip-up" style={{width: "400px", height:"150px",paddingLeft:"40px",marginLeft: "40px", marginTop : "150px", backgroundColor: "#BC9A39"}}>
                                     <div className="row m-3">
                                           <div className="col-8">
-                                                <img src="https://www.practo.com/consult/static/images/top-speciality-pediatric.svg" alt=""/>
+                                                <img src="https://www.practo.com/consult/static/images/top-speciality-pediatric.svg"/>
                                                 <h2 className="mx-auto">Happy Users</h2></div>
                                           <div className="col-4 mt-1">
                                                 <h3 className="mt-5">
-                                                      <CountUp start={12000}
-                                                            end={14485} duration={4} />
+                                                <CountUp start={12000}
+                                                                  end={14485} duration={4}/>
                                                 </h3>
-
+                                                
                                           </div>
                                     </div>
                               </div>

@@ -7,9 +7,7 @@ import { useForm } from 'react-hook-form'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import axios from 'axios'
-import { withRouter, useHistory } from 'react-router-dom'
-import Select from 'react-select';
-
+import {withRouter,useHistory} from 'react-router-dom'
 
 function DoctorRegistration() {
 
@@ -22,31 +20,32 @@ function DoctorRegistration() {
     const [license, setLicense] = useState("")
     const [hospital, setHospital] = useState("")
     const [address, setAddress] = useState("")
-    const [language, setLangauge] = useState([])
+    const [language, setLangauge] = useState("")
     const [state, setState] = useState("")
     const [city, setCity] = useState("")
     const [fees, setFees] = useState("")
     const [image, setImage] = useState(undefined)
     const token = localStorage.getItem("doctorAuth");
 
-    var history = useHistory()
+     var history= useHistory()
     const { register, handleSubmit, errors } = useForm();
-
+  
     useEffect(() => {
         Aos.init({ duration: 2000 })
-        getStateCity()
+       // getStateCity()
     }, [])
-    const getStateCity = () => {
-        let request = axios({
-            method: "GET",
-            url: "https://freegeoip.app/json/"
-        });
-        request.then(res => {
-            setState(res.data.region_name)
-            setCity(res.data.city)
-        })
-
-    }
+    // const getStateCity=()=>{
+    //     let request = axios({
+    //         method: "GET",
+    //         url: "https://freegeoip.app/json/"
+    //     });
+    //     request.then(res => {
+    //         console.log(res.data.state)
+    //         setState(res.data.state)
+    //         setCity(res.data.city)
+    //     })
+ 
+    // } 
     const uploadPic = (image) => {
         const data = new FormData()
         data.append("file", image)
@@ -63,16 +62,14 @@ function DoctorRegistration() {
         })
     }
     const docregister = (data) => {
-        // console.log("doc data", data)
-
-        const lang = language.map(el => el.value)
+        // console.log("doc data",data)
         const doc = {
-            name, age, image, gender, qualification, bio, specialisation, license, hospital, address, lang, state, city, fees
+            name, age, image, gender, qualification, bio, specialisation, license, hospital, address, language, state, city, fees
         }
         // console.log(doc)
         let request = axios({
             method: "POST",
-            url: "/adddoctor",
+            url: "http://localhost:3010/adddoctor",
             data: doc,
             headers: {
                 "x-auth-token": token
@@ -80,39 +77,29 @@ function DoctorRegistration() {
         });
         request.then(res => {
             console.log(res)
-            history.push('/docbooking')
+            history.push('/dashboard')
         })
 
 
 
 
     }
-    const handleChange = (e) => {
-        console.log(e)
-
-
-    }
-    const colourOptions = [{ value: 'English', label: 'English' },
-    { value: 'Hindi', label: 'Hindi' },
-    { value: 'Kannada', label: 'Kannada' }]
-    console.log(language)
     return (
-        <div >
+        <div>
             <Navbar />
             {
-                (() => {
-                    $("body").removeClass("modal-open");
-                    $("div.modal-backdrop").remove();
-                })()
+                    (() => {
+                        $("body").removeClass("modal-open");
+                        $("div.modal-backdrop").remove();
+                    })()
             }
-            <div className="container mt-5 ">
+            <div className="container">
                 <div className="row">
-
-                    <h1 className="col-4 offset-md-3">Registration</h1>
-                </div>
-                <div className="row">
-                    
-                    <div className="col-md-6 offset-md-3 shadow doctor-register">
+                    <div className="col-5">
+                        <img data-aos="fade-right" src={require('../images/20.jpg')} alt="" className="rounded" height="650px" />
+                    </div>
+                    <div className="col-6 doctor-register">
+                        <h2>Welcome to Doctor Page</h2>
                         <form onSubmit={handleSubmit(docregister)}>
                             <div className="form-group">
                                 <label for="userName">
@@ -172,85 +159,78 @@ function DoctorRegistration() {
                                 </select>
                                 {errors.specialisation && <p style={{ color: "red" }}>Please select your speciality.</p>}
                             </div>
-
+                        
+                        <div className="form-group">
+                            <div class="form-group">
+                                <label for="License">
+                                    <b>License No</b>
+                                </label>
+                                <input type="text" className="form-control" name="LicenseNo" onChange={(e) => setLicense(e.target.value)} ref={register({ required: true })} id="LicenseNo" placeholder="License No."></input>
+                                {errors.LicenseNo && <p style={{ color: "red" }}>Please mention Your license No.</p>}
+                            </div>
+                            <div class="form-group">
+                                <label for="hospital">
+                                    <b>Hospital</b>
+                                </label>
+                                <input type="text" className="form-control" name="hospital" onChange={(e) => setHospital(e.target.value)} ref={register({ required: true })} id="hospital" placeholder="Hospital Name"></input>
+                                {errors.hospital && <p style={{ color: "red" }}>Please mention hospital name.</p>}
+                            </div>
                             <div className="form-group">
-                                <div class="form-group">
-                                    <label for="License">
-                                        <b>License No</b>
-                                    </label>
-                                    <input type="text" className="form-control" name="LicenseNo" onChange={(e) => setLicense(e.target.value)} ref={register({ required: true })} id="LicenseNo" placeholder="License No."></input>
-                                    {errors.LicenseNo && <p style={{ color: "red" }}>Please mention Your license No.</p>}
-                                </div>
-                                <div class="form-group">
-                                    <label for="hospital">
-                                        <b>Hospital</b>
-                                    </label>
-                                    <input type="text" className="form-control" name="hospital" onChange={(e) => setHospital(e.target.value)} ref={register({ required: true })} id="hospital" placeholder="Hospital Name"></input>
-                                    {errors.hospital && <p style={{ color: "red" }}>Please mention hospital name.</p>}
-                                </div>
-                                <div className="form-group">
-                                    <label for="address">
-                                        <b>Address</b>
-                                    </label>
-                                    <textarea className="form-control" name="address" onChange={(e) => setAddress(e.target.value)} ref={register({ required: true })} id="address" placeholder="Enter address"></textarea>
-                                    {errors.address && <p style={{ color: "red" }}>Please mention clinic address</p>}
-                                </div>
-                                <div className="form-group">
-                                    <label for="langauge1">
-                                        <b>Language</b>
-                                    </label>
-                                    <Select
-                                        // defaultValue={[colourOptions[2], colourOptions[3]]}
-                                        onChange={(e) => { setLangauge([...e]); handleChange(e) }}
-
-                                        value={language}
-                                        isMulti
-                                        name="language1"
-                                        options={colourOptions}
-                                        className="basic-multi-select"
-                                        classNamePrefix="select language"
-                                        ref={register({ required: true })} id="language"
-                                    />
-
-                                    <span style={{ display: 'inline-block', width: 20 }} />
-                                    {errors.language && <p style={{ color: "red" }}>Your language</p>}
-                                </div>
-
-                                <div className="form-group">
-                                    <label for="state">
-                                        <b>State</b>
-                                    </label>
-                                    <input type="text" value={state} onChange={(e) => setState(e.target.value)} className="form-control" />
-
-                                    {errors.state && <p style={{ color: "red" }}>Your State</p>}
-                                </div>
-                                <div className="form-group">
-                                    <label for="city">
-                                        <b>City</b>
-                                    </label>
-                                    <input type="text" value={city} onChange={(e) => setCity(e.target.value)} className="form-control" />
-
-
-                                    {errors.city && <p style={{ color: "red" }}>Your City</p>}
-                                </div>
-                                <div className="form-group">
-                                    <label for="fees">
-                                        <b>Fee</b>
-                                    </label>
-                                    <input type="number" name="fees" className="form-control" onChange={(e) => setFees(e.target.value)} ref={register({ required: true })} id="fees" placeholder="How much You Charge"></input>
-                                    {errors.fees && <p style={{ color: "red" }}>How much you charge?</p>}
-                                </div>
-
+                                <label for="address">
+                                    <b>Address</b>
+                                </label>
+                                <textarea className="form-control" name="address" onChange={(e) => setAddress(e.target.value)} ref={register({ required: true })} id="address" placeholder="Enter address"></textarea>
+                                {errors.address && <p style={{ color: "red" }}>Please mention clinic address</p>}
+                            </div>
+                            <div className="form-group">
+                                <label for="langauge1">
+                                    <b>Language</b>
+                                </label>
+                                <select className="form-control" name="language" onChange={(e) => setLangauge(e.target.value)} ref={register({ required: true })} id="language1">
+                                    <option value="" disabled selected>Please Select Your Language</option>
+                                    <option value="english">English</option>
+                                    <option value="hindi">Hindi</option>
+                                    <option value="hindi">Kannada</option>
+                                </select>
+                                {errors.language && <p style={{ color: "red" }}>Your language</p>}
+                            </div>
+                            <input type="hidden" name="country" id="countryId" value="IN" />
+                            <div className="form-group">
+                                <label for="state">
+                                    <b>State</b>
+                                </label>
+                                <select name="state" ref={register({ required: true })} value={state} onChange={(e) => setState(e.target.value)} className="states order-alpha form-control" id="stateId">
+                                    <option value="" disabled selected>Select State</option>
+                                </select>
+                                {errors.state && <p style={{ color: "red" }}>Your State</p>}
+                            </div>
+                            <div className="form-group">
+                                <label for="city">
+                                    <b>City</b>
+                                </label>
+                                <select name="city" ref={register({ required: true })} value={city} onChange={(e) => setCity(e.target.value)} className="cities order-alpha limit-pop-70000 form-control" id="cityId">
+                                    <option value="" disabled selected>Select City</option>
+                                </select>
+                                {errors.city && <p style={{ color: "red" }}>Your City</p>}
+                            </div>
+                            <div className="form-group">
+                                <label for="fees">
+                                    <b>Fee</b>
+                                </label>
+                                <input type="number" name="fees" className="form-control" onChange={(e) => setFees(e.target.value)} ref={register({ required: true })} id="fees" placeholder="How much You Charge"></input>
+                                {errors.fees && <p style={{ color: "red" }}>How much you charge?</p>}
                             </div>
 
-                            <button type="submit" className="btn btn-warning">
-                                <b>Submit</b>
-                            </button>
+                        </div>
 
-                        </form>
-                    </div>
+                    <button type="submit" className="btn btn-warning">
+                        <b>Submit</b>
+                    </button>
+                    
+                </form>
                 </div>
             </div>
+        </div>
             <div className="mt-5">
                 <Footer />
             </div>

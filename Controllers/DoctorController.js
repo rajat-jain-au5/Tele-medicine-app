@@ -144,7 +144,7 @@ doctorController.setpass = function(req,res){
                secure: true,
                auth : {
                  user : "medicalapp331@gmail.com",
-                 pass : "rajat@1993"
+                 pass : "mjpdksnlvndgyhwe"
                }
              })
          
@@ -155,7 +155,7 @@ doctorController.setpass = function(req,res){
                subject : "Med - Tech ",
                text: "IT works",
                html:
-                   "Welcome to Med-Tech.Please click on Link to set Your New Password <br><a href=https://arogya-149.herokuapp.com/setpass?token=" + token +" target='_blank'>https://arogya-149.herokuapp.com/setpass</a>"  
+                   "Welcome to Med-Tech.Please click on Link to set Your New Password <br><a href=http://localhost:3000/setpass?token=" + token +" target='_blank'>http://localhost:3000/setpass</a>"  
              }
          
            await  transpoter.sendMail(mailOptions, function(err, userData) {

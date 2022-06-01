@@ -48,7 +48,7 @@ class BookAppointment extends React.Component {
         let token = localStorage.getItem("patientAuth");
         let request = axios({
             method: "GET",
-            url: "/getuser",
+            url: "http://localhost:3010/getuser",
             headers: {
                 "x-auth-token": token
             },
@@ -195,7 +195,7 @@ class BookAppointment extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log("asdfhh", state)
+    console.log("asdfhh", state)
     return {
         myDoc: state.doctor.selecteddoctor,
         slot: state.doctor.docSlot

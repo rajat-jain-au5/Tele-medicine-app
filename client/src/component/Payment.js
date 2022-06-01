@@ -66,7 +66,7 @@ class Payment extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log("Payment 35", state)
+    console.log("Payment 35", state)
     return {
         bookingStatus: state.doctor.cBooking.status,
         docInfo: state.doctor.selecteddoctor
