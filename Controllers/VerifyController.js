@@ -34,7 +34,7 @@ verifyController.verify = function(req,res){
       subject : "Med - Tech ",
       text: "IT works",
       html:
-        "Welcome to Med-Tech.Please click on Link to register Your account.<br><a href=http://localhost:3000/" + userInfo + "?token=" + token +" target='_blank'>https://arogya-149.herokuapp.com/doc?token="+token+"</a>"  
+        "Welcome to Med-Tech.Please click on Link to register Your account.<br><a href=https://arogya-app.onrender.com" + userInfo + "?token=" + token +" target='_blank'>https://arogya-app.onrender.com/doc?token="+token+"</a>"  
     }
 
   await  transpoter.sendMail(mailOptions, function(err, userData) {

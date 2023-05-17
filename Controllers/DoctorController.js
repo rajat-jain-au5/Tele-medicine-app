@@ -22,15 +22,15 @@ doctorController.register = function (req, res) {
                             })
                             newUser.save((err, user) => {
                                 if (err) return console.error(err);
-                                res.redirect('https://arogya-149.herokuapp.com/register/success')
+                                res.redirect('https://arogya-app.onrender.com/register/success')
                             })
                         }
                     })
-                } else { res.redirect('https://arogya-149.herokuapp.com/register/present')}
+                } else { res.redirect('https://arogya-app.onrender.com/register/present')}
             })
 
         } else (
-            res.redirect('https://arogya-149.herokuapp.com/register/expired')
+            res.redirect('https://arogya-app.onrender.com/register/expired')
         )
 
     })

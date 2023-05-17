@@ -6,9 +6,9 @@ const jwt = require('jsonwebtoken');
 router.get("/setpass",(req,res) => {
     jwt.verify(req.query.token,"amit",function(err) {
         if(err){
-            res.redirect("https://arogya-149.herokuapp.com/register/expired")
+            res.redirect("https://arogya-app.onrender.com/register/expired")
         }else{
-            res.redirect("https://arogya-149.herokuapp.com/newpass")
+            res.redirect("https://arogya-app.onrender.com/newpass")
         }
     })
 })
